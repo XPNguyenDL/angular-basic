@@ -1,0 +1,22 @@
+<div class="max-w-md mx-auto rounded-md overflow-hidden shadow-md hover:shadow-lg group">
+    <div class="relative overflow-hidden">
+        <img class="w-full h-[180px] object-cover group-hover:scale-105 group-hover:duration-500"
+            [src]="housingLocation.photo" alt="Product Image">
+        <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">SALE
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="text-lg font-medium mb-2">{{housingLocation.name}}</h3>
+        <p class="text-gray-600 text-sm mb-4">
+            {{housingLocation.city}}, {{housingLocation.state}}
+        </p>
+        <div class="flex items-center justify-between">
+            <span class="font-bold text-lg">$19.99</span>
+            <a [routerLink]="['/details', housingLocation.id]" routerLinkActive="router-link-active">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    Details
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
